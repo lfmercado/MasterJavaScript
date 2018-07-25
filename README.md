@@ -10,6 +10,8 @@ Se crea un componente junto con su vista, ese componente
 
  Evento blur
    Por medio de este evento se puede saber cuando se ha salido del texField 
-   ngClass
+ ngClass
    nos permite asiganarle a un atributo una clase cuando se cumpla una condicion
-   
+ 
+ router.navigate(['/zapatillas'])
+ por medio de esta directiva se puede redireccionar a una url especifica ya sea por medio de un evento o una condicion
