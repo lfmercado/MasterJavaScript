@@ -15,3 +15,7 @@ Se crea un componente junto con su vista, ese componente
  
  router.navigate(['/zapatillas'])
  por medio de esta directiva se puede redireccionar a una url especifica ya sea por medio de un evento o una condicion
+
+
+ Las PIPES son un tipo de filtros que se le pueden aplicar a fechas, strings para poder setearlos de una manera comoda o neceseria
+ se pueden descargar algunas librerias de angular 2 que vienen con muchos pipes de fechas como los que se encontrarian en angular/moment

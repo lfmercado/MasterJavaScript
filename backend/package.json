@@ -1,0 +1,19 @@
+{
+  "name": "api-rest-nodejs",
+  "version": "1.0.0",
+  "description": "Api Rest del master de JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfmercado/MasterJavaScript.git"
+  },
+  "author": "Luis Fernando Mercado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lfmercado/MasterJavaScript/issues"
+  },
+  "homepage": "https://github.com/lfmercado/MasterJavaScript#readme"
+}
