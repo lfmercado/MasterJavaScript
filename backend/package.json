@@ -4,7 +4,8 @@
   "description": "Api Rest del master de JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/lfmercado/MasterJavaScript/issues"
   },
-  "homepage": "https://github.com/lfmercado/MasterJavaScript#readme"
+  "homepage": "https://github.com/lfmercado/MasterJavaScript#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.1.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
 }
