@@ -1,6 +1,7 @@
 'use strict'
 
 var Project = require('../models/project');
+var fs = require('fs');
 
 var controller = {
     home: function (req, res) {
@@ -106,14 +107,13 @@ var controller = {
         var projectId = req.params.id;
         var fileName = "imagen no subida";
 
-        if (req.files) {
+    if (req.files) {    
             var filePath = req.files.image.path;
             var fileSplit = filePath.split('\\');
             var fileName = fileSplit[1];
-
-            console.log(projectId);
-            console.log(fileName);
-
+            var extSplit = filePath.split('\.');
+            var extFile = extSplit[1];
+            if(extFile == 'jpg'||extFile == 'png'||extFile == 'git'||extFile == 'jpeg'){
             Project.findByIdAndUpdate(projectId, {image: fileName}, {new: true}, (err, projectUpdate) => {
                 if (err) return res.status(500).send({message: 'La imagen no se ha subido'});
                 if (!projectUpdate) return res.status(404).send({message: 'La imagen o el projecto no existen'});
@@ -123,8 +123,15 @@ var controller = {
                     project: projectUpdate
                 });
             });
+            }else{
+            fs.unlink(filePath, (err)=>{
+                return res.status(200).send({
+                    message:'La extencion del archivo no es valida'
+                })
+            }) 
+            }
 
-        } else {
+    } else {
             return res.status(500).send({
                 message: 'No se ha subido la imagen',
                 file: fileName
