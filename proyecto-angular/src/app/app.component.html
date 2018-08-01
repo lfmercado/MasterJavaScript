@@ -1,4 +1,20 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<h1>Proyecto Angular</h1>
+<header>
+<ul>
+  <li><a [routerLink]="['/about-me']">Sobre Mi</a></li>
+  <li><a [routerLink]="['/projects']">Proyectos</a></li>
+  <li id="logo"><a href="#">LF</a></li>
+  <li><a [routerLink]="['/create']">Crear Nuevo Proyecto</a></li>
+  <li><a [routerLink]="['/contact']">Contacto</a></li>
+</ul>
+</header>
+<section id="content"><router-outlet></router-outlet>
+</section>
+<footer>
+  Master En JavaScript
+</footer>
+ 
+<!--The content below is only a placeholder and can be replaced.
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
@@ -17,4 +33,4 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-
+-->

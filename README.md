@@ -19,3 +19,11 @@ Se crea un componente junto con su vista, ese componente
 
  Las PIPES son un tipo de filtros que se le pueden aplicar a fechas, strings para poder setearlos de una manera comoda o neceseria
  se pueden descargar algunas librerias de angular 2 que vienen con muchos pipes de fechas como los que se encontrarian en angular/moment
+
+
+ Cualquier problema con el angular tratr con los comandos
+ npm update
+ npm install 
+
+ Para poder acceder a las url que uno crea se tiene que utilzar el "router-outlet" que es el que activa el funcionamiento del routing
+ y carga un componente dentro de la pagina en funcion a la url que uno haya puesto.
