@@ -27,3 +27,5 @@ Se crea un componente junto con su vista, ese componente
 
  Para poder acceder a las url que uno crea se tiene que utilzar el "router-outlet" que es el que activa el funcionamiento del routing
  y carga un componente dentro de la pagina en funcion a la url que uno haya puesto.
+
+ para resolver problemas con el rxjs se tiene que instalar las dependencias por medio del comando "npm install --save rxjs-compat

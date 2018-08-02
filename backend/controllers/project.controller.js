@@ -1,6 +1,6 @@
 'use strict'
 
-var Project = require('../models/project');
+var Project = require('../models/project.model');
 var fs = require('fs');
 
 var controller = {
