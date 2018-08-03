@@ -81,8 +81,9 @@ header a:hover,
 /* Contenedor Principal..*/
 
 #content{
-    min-height: 500px;
+    min-height: 600px;
     width: 75%;
+    height: auto;
     margin: 0 auto; /*Para Centrar */
     box-shadow: 0px 0px 40px black;
     border-left: 1px solid #b7b7b7;
@@ -152,6 +153,13 @@ article.about{
     margin-bottom: 10px;
 }
 
+.container .image img{
+    width: 60%;
+}
+
+.container .data{
+    width: 50%
+}
 form{
     width: 50%;
 }
@@ -170,7 +178,9 @@ form textarea{
 
 }
 
-form input[type="submit"]{
+form input[type="submit"],
+.buttom-edit,
+.buttom-delete{
     display: block;
     font-size: 17px;
     padding: 10px;
@@ -180,8 +190,95 @@ form input[type="submit"]{
     border: 1px solid rgba(38, 7, 76, 0.8);
     cursor: pointer;
 }
+.buttom-edit,
+.buttom-delete{
+    width: 20%;
+    margin-right: 10px;
+    text-decoration: none;
+}
 
 form input:hover[type ="submit"]{
     background: rgba(59, 14, 107, 0.9);
     border: 1px solid rgba(31, 6, 61, 0.8);
 }
+
+form input:hover[disabled]{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.form_error{
+    padding: 3px;
+    background: red;
+    color: white;
+    font-size: 14px;
+}
+
+.ventana_flotante {
+    background: none repeat scroll 0 0 rgb(59, 182, 59);
+    border: 1px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    bottom: 50px;
+    left: auto;
+    margin-left: 20px;
+    padding: 10px 0 0;
+    position: top;
+    text-align: center;
+    width: 280px;
+    color:white;
+    z-index: 10;
+}
+.ventana_flotante2 {
+    background: none repeat scroll 0 0 rgb(236, 69, 69);
+    border: 1px solid #DDDDDD;
+    border-radius: 5px 5px 5px 5px;
+    bottom: 50px;
+    left: auto;
+    margin-left: 20px;
+    padding: 10px 0 0;
+    position: top;
+    text-align: center;
+    width: 180px;
+    color:white;
+    z-index: 10;
+}
+
+/*PAgina De Proyectos*/
+.project
+{
+    list-style: none;
+    display: inline-block;
+    /*float: left;*/
+    width: 29%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+.project .image{
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+.project .project_h3{
+    margin-bottom: 1%;  
+}
+.project .project_p{
+    margin-top: 1%;  
+}
+.project img{
+   width: 100%;
+}
+
+.project_ul{
+    margin-bottom: -4%;
+}
+
+.foto_404{
+    margin-left: 27%;
+}
+.project a{
+    text-decoration: none;
+    color:black;
+}
+

@@ -1,8 +1,8 @@
 export class Project{
     constructor(
         public _id: String,
-        public  nombre:String,
-        public desription:String,
+        public name:String,
+        public description:String,
         public category:String,
         public year: Number,
         public langs: String,

@@ -1,30 +1,57 @@
 <div class="container">
   <h2>{{title}}</h2>
   <form action="" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+    <div class="ventana_flotante" *ngIf="res">
+    !!El Documento Se Ha Guardado Con Exito!! Puedes <a [routerLink]="['/project/', saveProject._id]">Verlo Aquí</a>
+    </div>
+    <div class="ventana_flotante2" *ngIf="res==false">
+        !!El Documento No Se Ha Podido Guardar!!
+        </div>
     <p>
       <label for="name">Nombre</label>
-      <input type="text" name="name" #name=ngModel [(ngModel)]="project.name" />
+      <input type="text" name="name" #name=ngModel [(ngModel)]="project.name" required>
+      <br>
+      <span class="form_error" *ngIf="name.touched && !name.valid"> 
+        ¡¡El nombre no es valido!!
+      </span>
     </p>
     <p>
       <label for="description">Descripcion</label>
-      <textarea type="text" name="description" #description=ngModel [(ngModel)]="project.description"> </textarea>
+      <textarea type="text" name="description" #description=ngModel [(ngModel)]="project.description" required> </textarea>
+      <br>
+      <span class="form_error" *ngIf="description.touched && !description.valid"> 
+        ¡¡La descripcion no es valida!!
+      </span>
     </p>
     <p>
       <label for="category">Categoria</label>
-      <input type="text" name="category" #category=ngModel [(ngModel)]="project.category" />
+      <input type="text" name="category" #category=ngModel [(ngModel)]="project.category"required />
+      <br>
+      <span class="form_error" *ngIf="category.touched && !category.valid"> 
+        ¡¡La categoria no es valida!!
+      </span>
     </p>
     <p>
       <label for="langs">Lenguajes Utilizados</label>
-      <input type="text" name="langs" #langs=ngModel [(ngModel)]="project.langs" />
+      <input type="text" name="langs" #langs=ngModel [(ngModel)]="project.langs" required/>
+      <br>
+      <span class="form_error" *ngIf="langs.touched && !langs.valid"> 
+        ¡¡La categoria no es valida!!
+      </span>
+    </p>
+  
+    <p>
+      <label for="year">Año De Lanzamiento</label>
+      <input type="text" name="year" #year=ngModel [(ngModel)]="project.year" required/>
+      <br>
+      <span class="form_error" *ngIf="year.touched && !year.valid"> 
+        ¡¡El año no es valido!!
+      </span>
     </p>
     <p>
       <label for="image">Insertar Imagen</label>
-      <input type="file" placeholder="Subir Imagen" name="image" />
+      <input type="file" placeholder="Subir Imagen" name="image" (change)="fileChangeEvent($event)"/>
     </p>
-    <p>
-      <label for="year">Año De Lanzamiento</label>
-      <input type="text" name="year" #year=ngModel [(ngModel)]="project.year" />
-    </p>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
   </form>
 </div>
