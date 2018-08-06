@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" *ngIf="project">
   <h2>{{title}}</h2>
-  <form action="" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+  <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
     <div class="ventana_flotante" *ngIf="res">
     !!El Documento Se Ha Guardado Con Exito!! Puedes <a [routerLink]="['/project/', saveProject._id]">Verlo Aquí</a>
     </div>
@@ -49,7 +49,10 @@
       </span>
     </p>
     <p>
-      <label for="image">Insertar Imagen</label>
+      <label for="image">Imagen Del Proyecto</label>
+      <span class="image" *ngIf="project.image">
+        <img src="{{url+ 'get_image/' + project.image}}" *ngIf="project.image" style="width: 100px; height: 100px;">
+      </span>
       <input type="file" placeholder="Subir Imagen" name="image" (change)="fileChangeEvent($event)"/>
     </p>
     <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">

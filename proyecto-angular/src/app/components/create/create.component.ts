@@ -33,7 +33,8 @@ export class CreateComponent implements OnInit {
         console.log(response);
         
         //Subir la imagen
-        this._uploadService.makeFileRequest(Global.url + 'upload_image/' + response.project._id,[],this.fileToUpload,"image").then((result:any)=>{
+        this._uploadService.makeFileRequest(Global.url + 'upload_image/' + response.project._id,[],this.fileToUpload,"image")
+        .then((result:any)=>{
           this.saveProject = result.project;
           this.res = true;
           console.log(result);

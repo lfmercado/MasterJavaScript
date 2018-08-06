@@ -9,9 +9,11 @@ import { post } from '../../../node_modules/@types/selenium-webdriver/http';
 @Injectable()
 export class ProjectService{
     public url:String;
+    
 
     constructor( private _http: HttpClient){
         this.url= Global.url;
+        
     }
 
     testService(){
@@ -38,6 +40,13 @@ export class ProjectService{
     
     deleteProject(id): Observable<any>{
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
-        return this._http.delete(this.url + 'project/'+ id , {headers: headers});
+        return this._http.delete(this.url + 'project/'+ id, {headers: headers});
+    }
+
+    editProject(project): Observable<any>{
+        let params = JSON.stringify(project);
+        let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+        return this._http.put(this.url + 'project/' + project._id, params, {headers: headers});
     }
 }

@@ -1,3 +1,10 @@
-<p>
-  contact works!
-</p>
+<div class="container">
+  Tamaño del Slider
+  <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()"/>
+  <br>
+  <button (click)="cargarSlider()" style="margin: 5px">Cargar Slider</button>
+  <button (click)="resetSlider()" stye="margin: 5px">Reset Slider</button>
+  <div *ngIf="anchuraSlider">
+    <slider [width]="anchuraSlider"></slider>
+  </div>
+</div>
