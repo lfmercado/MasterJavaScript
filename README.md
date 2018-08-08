@@ -29,3 +29,6 @@ Se crea un componente junto con su vista, ese componente
  y carga un componente dentro de la pagina en funcion a la url que uno haya puesto.
 
  para resolver problemas con el rxjs se tiene que instalar las dependencias por medio del comando "npm install --save rxjs-compat
+
+
+ El viewChild es una propiedad de tipo decorador de Angular el cual nos permite acceder a el html que tenga unavariable en su estructura, por medio de esto podemos acceder a los diferentes atributos del HTML
